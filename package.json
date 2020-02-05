@@ -9,6 +9,7 @@
   "author": "Pawel Gajo",
   "license": "MIT",
   "dependencies": {
+    "request": "^2.88.0",
     "selenium-webdriver": "^4.0.0-alpha.5"
   }
 }

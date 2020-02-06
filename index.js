@@ -10,6 +10,6 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.listen(8000, () => console.log('Server started'));
 
 app.get('/page/:id', async (req, res) => {
-  const ret = await pageParser.getContentOfPages(1, pages);
+  const ret = await pageParser.getContentOfPages(req.body.id, pages);
   res.send(ret);
 })

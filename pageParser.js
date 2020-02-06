@@ -13,9 +13,11 @@ class PageParser {
             pageNumber =  kwNumber - pageNumber;
         }
         const uri = options.uri + options.separator + pageNumber;
+        console.log(uri);
         const res = await rq({uri});
+        console.log(parser(res).querySelectorAll(options.content.query));
         return parser(res).querySelectorAll(options.content.query)
-        .map( x => ({ img: x.attributes[options.content.attribute], page: options.name}));
+        .map( x => ({ img: options.imagesPrefix + x.attributes[options.content.attribute], page: options.name}));
     }
     async  getContentOfPages( pageNumber, pages) {
         let res = [];

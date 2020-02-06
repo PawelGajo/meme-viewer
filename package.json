@@ -9,7 +9,10 @@
   "author": "Pawel Gajo",
   "license": "MIT",
   "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "node-html-parser": "^1.2.4",
     "request": "^2.88.0",
-    "selenium-webdriver": "^4.0.0-alpha.5"
+    "request-promise": "^4.2.5"
   }
 }

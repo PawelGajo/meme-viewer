@@ -1,6 +1,6 @@
 const pages ={
     JBZD: {
-        name: "jbzd",
+        name: "JBZD",
         uri: 'https://jbzd.com.pl',
         separator: '/str/',
         content: {
@@ -11,7 +11,7 @@ const pages ={
         imagesPrefix: '',
     },
     KWEJK: {
-        name: "kwejk",
+        name: "KWEJK",
         uri: 'https://kwejk.pl',
         separator: '/strona/',
         content: {
@@ -22,11 +22,11 @@ const pages ={
         imagesPrefix: '',
     },
     MISTRZOWIE: {
-        name: "mistrzowie",
+        name: "MISTRZOWIE",
         uri: 'https://mistrzowie.org',
         separator: '/page/',
         content: {
-            query: 'pictureImage img',
+            query: 'img.pic',
             attribute: 'src',
         },
         imagesPrefix: 'https://mistrzowie.org',

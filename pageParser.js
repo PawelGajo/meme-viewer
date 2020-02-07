@@ -13,9 +13,7 @@ class PageParser {
             pageNumber =  kwNumber - pageNumber;
         }
         const uri = options.uri + options.separator + pageNumber;
-        console.log(uri);
         const res = await rq({uri});
-        console.log(parser(res).querySelectorAll(options.content.query));
         return parser(res).querySelectorAll(options.content.query)
         .map( x => ({ img: options.imagesPrefix + x.attributes[options.content.attribute], page: options.name}));
     }
@@ -24,7 +22,7 @@ class PageParser {
         for (let page of Object.keys(pages)) {
             res = [...res, ...await this.getContent(pageNumber, pages[page])];
         }
-        return this.shuffle(res);
+        return { pages: Object.keys(pages) ,content: this.shuffle(res) };
     }
     shuffle(array) {
         for (var i = array.length - 1; i > 0; i--) {

@@ -22,7 +22,7 @@ class PageParser {
         for (let page of Object.keys(pages)) {
             res = [...res, ...await this.getContent(pageNumber, pages[page])];
         }
-        return { pages: Object.keys(pages) ,content: this.shuffle(res) };
+        return { page: pageNumber, websites: Object.keys(pages) ,content: this.shuffle(res) };
     }
     shuffle(array) {
         for (var i = array.length - 1; i > 0; i--) {
